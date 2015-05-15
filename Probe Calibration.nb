@@ -1,0 +1,343 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12931,        334]
+NotebookOptionsPosition[     12645,        319]
+NotebookOutlinePosition[     12987,        334]
+CellTagsIndexPosition[     12944,        331]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+  "SetDirectory", "[", 
+   "\"\<C:\\\\Users\\\\trh11\\\\Desktop\\\\Direct Probe Reading\\\\\>\"", 
+   "]"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"With", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"nb", "=", 
+      RowBox[{"CreateWindow", "[", 
+       RowBox[{"Visible", "\[Rule]", "False"}], "]"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"CreateDialog", "[", "\[IndentingNewLine]", 
+     RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"calibration", "=", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"calm1", ",", "calb1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm2", ",", "calb2"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm3", ",", "calb3"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm4", ",", "calb4"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm5", ",", "calb5"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm6", ",", "calb6"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm7", ",", "calb7"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm8", ",", "calb8"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm9", ",", "calb9"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm10", ",", "calb10"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm11", ",", "calb11"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm12", ",", "calb12"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm13", ",", "calb13"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm14", ",", "calb14"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"calm15", ",", "calb15"}], "}"}]}], "}"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"CALIBRATE", "\[Equal]", "1"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"Export", "[", 
+           RowBox[{
+           "\"\<Probe Calibration Variables.txt\>\"", ",", "calibration", 
+            ",", "\"\<Table\>\""}], "]"}]}], "\[IndentingNewLine]", "]"}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"CALIBRATE", "=", 
+         RowBox[{"0", "/;", 
+          RowBox[{"CALIBRATE", "\[Equal]", "1"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"Grid", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<Slope\>\"", ",", "Bold", ",", 
+                RowBox[{"FontFamily", "\[Rule]", "\"\<Helvetica\>\""}]}], 
+               "]"}], ",", 
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<Intercept\>\"", ",", "Bold", ",", 
+                RowBox[{"FontFamily", "\[Rule]", "\"\<Helvetica\>\""}]}], 
+               "]"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm1", ",", "0", ",", "\"\<pH-RAS\>\""}], "}"}], 
+                "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb1", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm2", ",", "0", ",", "\"\<pH-MAIN\>\""}], "}"}], 
+                "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb2", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm3", ",", "0", ",", "\"\<pH-QUAR\>\""}], "}"}], 
+                "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb3", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm4", ",", "0", ",", "\"\<\[Degree]C-RAS\>\""}], 
+                 "}"}], "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb4", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm5", ",", "0", ",", "\"\<\[Degree]C-MAIN\>\""}], 
+                 "}"}], "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb5", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm6", ",", "0", ",", "\"\<\[Degree]C-QUAR\>\""}], 
+                 "}"}], "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb6", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm7", ",", "0", ",", "\"\<O2%-RAS\>\""}], "}"}], 
+                "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb7", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm8", ",", "0", ",", "\"\<O2%-MAIN\>\""}], "}"}], 
+                "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb8", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm9", ",", "0", ",", "\"\<O2%-QUAR\>\""}], "}"}], 
+                "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb9", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm10", ",", "0", ",", "\"\<COND-RAS\>\""}], "}"}],
+                 "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb10", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm11", ",", "0", ",", "\"\<COND-QUAR\>\""}], 
+                 "}"}], "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb11", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm12", ",", "0", ",", "\"\<pH-INC\>\""}], "}"}], 
+                "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb12", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm13", ",", "0", ",", "\"\<\[Degree]C-INC\>\""}], 
+                 "}"}], "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb13", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm14", ",", "0", ",", "\"\<O2%-INC\>\""}], "}"}], 
+                "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb14", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calm15", ",", "0", ",", "\"\<\[Degree]C-AMB\>\""}], 
+                 "}"}], "}"}], "]"}], ",", 
+              RowBox[{"Control", "[", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"calb15", ",", "0"}], "}"}], "}"}], "]"}]}], "}"}]}],
+            "\[IndentingNewLine]", "}"}], ",", 
+          RowBox[{"Alignment", "\[Rule]", "Right"}]}], "\[IndentingNewLine]", 
+         "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"Control", "[", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"CALIBRATE", ",", "0", ",", "\"\<\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", "\[Rule]", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<CALIBRATE\>\"", ",", "Bold", ",", "Large"}], 
+             "]"}]}], "}"}], ",", "Setter", ",", 
+          RowBox[{"Background", "\[Rule]", 
+           RowBox[{"Lighter", "[", 
+            RowBox[{"Green", ",", " ", ".7"}], "]"}]}]}], "}"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ControlType", "\[Rule]", "InputField"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"FrameLabel", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"\"\<\>\"", ",", "\"\<\>\"", ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+           "\"\<Leave no blank fields. Enter '0' for unused probes.\>\"", ",",
+             "Red"}], "]"}], ",", "\"\<\>\""}], "}"}]}]}], 
+      "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", "]"}]}], 
+   "\[IndentingNewLine]", "]"}], ";"}]}], "Input",
+ Editable->False,
+ CellOpen->False,
+ InitializationCell->True,
+ CellChangeTimes->CompressedData["
+1:eJwlzk0ogwEAxvERJZJ87M2WDbUDDkwOO6A2Oays5GuNSO1DMpGSWBsRYwhr
+qcXBYiPEjKQ2mWRsHGilrBYlEjM7mImQ93kdnn71nP7Z0s5qRTSNRmORg73L
+NV3vmQGBR/5JySyI6omQaoknDQyt9Gvhc9WlDlbwPPP//9wqbJzetMFWfd8h
+nAm2u2HZhPwGcuPM97AjJTUM2SN7UR+kV4NGEfxWucRQ5MyVwNrCOwWUVX1p
+YCqXPkLpCJih+syyDjm3+1YozIkcwH0m3Qm1p0PH0M8wUE4RR24YlPoof2Ub
+EiIrIPD6xfUw3XCigNdN95QPzUolHFapKGNmdV4G6auj4RHyu3df4JaNF4Jl
+C+lv0D6WRGOShku4cdBUv5gBR/uWLCzSOlfMGpzkqK2wobJ8G+aX8sOQER/7
+Aw+STQlsdBFtSVCpP0+DxuIdAgp3WljQlMjPgz75QBG8GLcL4B8a3d/5
+  "]]
+},
+WindowSize->{1424, 828},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 12083, 297, 19, "Input",
+ CellOpen->False,
+ InitializationCell->True]
+}
+]
+*)
+
+(* End of internal cache information *)
