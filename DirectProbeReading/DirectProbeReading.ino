@@ -26,4 +26,4 @@ void loop(){
     }                                                   // last channel voltage and next.
     Serial.flush();                                     // when done flush the serial buffer.
   }
-}                                                       // Repeat until bext collection cycle..
+}                                                       // Repeat until next collection cycle..
